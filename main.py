@@ -27,6 +27,7 @@ def get_data(url, max_retries=5, delay_between_retries=1):
         else:
             break
     json_response = content.json()
+
     return json_response
     # pass  # the rest of your logic here
 
@@ -37,7 +38,6 @@ def main():
     """
 
     data = get_data(URL)
-    print(data)
     if not data:
         raise ValueError('No data to process')
 
